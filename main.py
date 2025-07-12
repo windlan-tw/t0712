@@ -4,12 +4,6 @@ import shopping
 app = FastAPI()
 
 
-@app.get("/")from fastapi import FastAPI
-import shopping
-
-app = FastAPI()
-
-
 @app.get("/")
 def read_main():
     return {"msg": "Hello World"}
@@ -29,3 +23,4 @@ def pricing(keyword: str, sort_by: str = None):
     if sort_by == "pricing":
         data.sort(key=get_pricing, reverse=True)
     return data
+    
